@@ -1,0 +1,6 @@
+@Infotrack.Api.Settlement_HostAddress = http://localhost:5282
+
+GET {{Infotrack.Api.Settlement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
