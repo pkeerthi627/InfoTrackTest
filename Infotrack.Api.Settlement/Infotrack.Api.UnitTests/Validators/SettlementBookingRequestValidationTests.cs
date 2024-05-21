@@ -1,16 +1,11 @@
 ﻿using Infotrack.Api.Settlement.Dtos;
 using Infotrack.Api.Settlement.Handlers.Settlement;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infotrack.Api.UnitTests.Validators
 {
     public class SettlementBookingRequestValidationTests
     {
-        SettlementRequestValidator requestValidator = new SettlementRequestValidator();
+        readonly SettlementRequestValidator requestValidator = new ();
 
         [Fact]
         public void Validate_BookingRequest_EmptyName()

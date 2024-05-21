@@ -11,7 +11,7 @@ namespace Infotrack.Api.Settlement.Handlers
         private readonly ILogger<GlobalExceptionHandler> _logger;
         public GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger)
         {
-            _logger = logger;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)

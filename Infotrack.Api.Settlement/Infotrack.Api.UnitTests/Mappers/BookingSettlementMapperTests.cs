@@ -17,9 +17,7 @@ namespace Infotrack.Api.UnitTests.Mappers
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task AutoMap_AssertConfiguration_IsValid()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        public void AutoMap_AssertConfiguration_IsValid()
         {
             //Arrange
             //Act

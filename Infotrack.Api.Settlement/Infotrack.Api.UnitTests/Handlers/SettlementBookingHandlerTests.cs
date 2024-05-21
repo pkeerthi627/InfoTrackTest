@@ -3,7 +3,6 @@ using Infotrack.Api.Settlement.Services;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using NSubstitute;
 using System.Net.Mime;
 using System.Text;
@@ -17,7 +16,7 @@ namespace Infotrack.Api.UnitTests.Handlers
 
         public SettlementBookingHandlerTestsApp(Action<IServiceCollection> serviceCollection)
         {
-            _serviceCollection = serviceCollection;
+            _serviceCollection = serviceCollection ?? throw new ArgumentNullException(nameof(serviceCollection));
         }
 
         protected override IHost CreateHost(IHostBuilder builder)

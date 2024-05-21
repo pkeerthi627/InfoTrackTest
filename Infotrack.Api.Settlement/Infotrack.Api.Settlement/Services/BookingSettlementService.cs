@@ -18,9 +18,9 @@ namespace Infotrack.Api.Settlement.Services
             ApiDbContext dbContext,
             IMapper mapper)
         {
-            _logger = logger;
-            _dbContext = dbContext;
-            _mapper = mapper;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         public async Task<SettlementBookingResponse> BookSettlementAsync(SettlementBookingRequest request)
