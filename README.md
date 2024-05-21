@@ -17,9 +17,12 @@ Sample Request
 
 Sample Success Response 
   {
-  "bookingTime": "string",
-  "name": "string"
-  }
+  "status": "string",
+  "data": {
+    "bookingId": "string"
+  },
+  "message": "string"
+}
 
 Please refer to Launch settings for port info based on what we run the app on 
 
